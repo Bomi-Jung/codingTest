@@ -10,18 +10,19 @@ public class Dice3 {
 	 */
 
 	public static void main(String[] args) {
-		int p = 6;
-		int q = 3;
-		int r = 3;
-		int e = 3;
+		
+		
 		
 		System.out.println();
 		
 	}
 
-	public int dice(int p, int q, int r, int e) {
+	public int dice(int p , int q, int r, int e) {
 		
-	
+	p=3;
+	q=3;
+	r=2;
+	e=5;
 		int answer = 0;
 		if (p == q && q == r && r == e) {// 1번
 			return answer = 1111 * p;
@@ -30,7 +31,7 @@ public class Dice3 {
 			return answer = (10 * p + q) * (10 * p + q);
 
 		} else if ((p == r && q == e) || (p == e && q == r)) {// 3번
-			return answer = (p + q) * Math.abs(p - q);
+			return answer = (p + q) * Math.abs(p-q);
 			
 		} else if (p == q && p != r && p != e) {
 			return answer = e * r;
@@ -42,11 +43,16 @@ public class Dice3 {
 			return answer = q * r;
 			
 		} else {
-			int array[] = { p, q, r, e };
+			int array [] = { p, q, r, e};
 			int min = array[0];
-			Arrays.sort(array);
+			for ( int num : array) {
+				if (num < min) {
+					min =num;
+				}
+			}
 			return answer = min;
 		}
 
 	}
 }
+
