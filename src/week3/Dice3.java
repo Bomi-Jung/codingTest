@@ -51,8 +51,11 @@ public class Dice3 {
 				}
 			}
 			return answer = min;
+			
 		}
 
 	}
-}
+	}
+	
+
 
